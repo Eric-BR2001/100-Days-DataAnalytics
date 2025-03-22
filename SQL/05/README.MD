@@ -58,3 +58,71 @@ select campaign_id,timestamp,date,inventorytype,ad_type,available_impressions,ma
 ### Query
 
 SELECT  t1.product_code, t1.company, t1.type, t2.cost FROM products_type t1 JOIN products_cost t2 on t1.product_code=t2.product_code
+
+# SQL JOIN Practice
+
+This exercice contains two tables: `Customers` and `Orders`. Below are the schema and some sample queries to practice SQL `JOIN`.
+
+## **Tables**
+
+### **Customers Table**
+| CustomerID | Name    | City    | Country  |
+|------------|--------|---------|---------|
+| 1          | Alice  | New York | USA     |
+| 2          | Bob    | London   | UK      |
+| 3          | Charlie| Paris    | France  |
+| 4          | David  | Berlin   | Germany |
+| 5          | Emma   | Tokyo    | Japan   |
+
+### **Orders Table**
+| OrderID | CustomerID | Product  | Quantity |
+|---------|------------|----------|----------|
+| 101     | 1          | Laptop   | 2        |
+| 102     | 3          | Phone    | 1        |
+| 103     | 4          | Tablet   | 3        |
+| 104     | 2          | Monitor  | 1        |
+| 105     | 5          | Keyboard | 4        |
+| 106     | 1          | Mouse    | 2        |
+
+---
+
+## **SQL Queries and Answers**
+
+### Get all customers who placed an order along with their order details
+```sql
+SELECT O.CustomerID, C.Name, O.OrderID, O.Product, O.Quantity
+FROM Orders O
+INNER JOIN Customers C ON O.CustomerID = C.CustomerID;
+```
+
+### Find customers who have NOT placed any order
+```sql
+SELECT C.Name
+FROM Customers C
+LEFT JOIN Orders O ON C.CustomerID = O.CustomerID
+WHERE O.OrderID IS NULL;
+```
+
+### Get the total quantity of products ordered by each customer
+```sql
+SELECT O.CustomerID, C.Name, SUM(O.Quantity) AS TotalQuantity
+FROM Orders O
+INNER JOIN Customers C ON O.CustomerID = C.CustomerID
+GROUP BY O.CustomerID, C.Name;
+```
+
+### Show all orders, including those from customers who may not exist in the Customers table
+```sql
+SELECT O.OrderID, O.CustomerID, O.Product, O.Quantity
+FROM Orders O
+LEFT JOIN Customers C ON O.CustomerID = C.CustomerID;
+```
+
+### Find out which products have been ordered by customers from the USA
+```sql
+SELECT C.Name, O.Product
+FROM Orders O
+INNER JOIN Customers C ON O.CustomerID = C.CustomerID
+WHERE C.Country = 'USA'
+ORDER BY C.Name;
+```
