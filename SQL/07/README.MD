@@ -33,6 +33,7 @@ This dataset can be used to analyze:
    FROM clean_ads_data 
    LIMIT 50;
    ```
+   
 **Question:** How do the total available impressions vary across different weekdays?
 
 2. Retrieve the total available impressions for specific weekdays:
@@ -42,6 +43,7 @@ This dataset can be used to analyze:
    WHERE date_2 IN ("Friday", "Thursday", "Monday", "Tuesday", "Wednesday") 
    GROUP BY date_2;
    ```
+
 **Question:** How much difference exists between available impressions and actual impressions for each day?
 
 3. Retrieve the difference between total available impressions and total impressions for each day:
@@ -50,6 +52,7 @@ This dataset can be used to analyze:
    FROM clean_ads_data 
    GROUP BY date_2;
    ```
+
 **Question:** What is the impression difference for each day when filtering by working hours (10 AM to 5 PM)?
 
 4. Retrieve the difference between available impressions and impressions for specific hours of the day (between 10 AM and 5 PM):
@@ -59,6 +62,7 @@ This dataset can be used to analyze:
    WHERE hour_of_day BETWEEN 10 AND 17 
    GROUP BY date_2;
    ```
+
 **Question:** Which ad size and ad type combination has the highest difference in impressions?
 
 5. Retrieve the ad size and ad type combination has the highest difference in impressions
