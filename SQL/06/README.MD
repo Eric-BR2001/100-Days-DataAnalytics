@@ -33,6 +33,7 @@ This dataset can be used to analyze:
 | 3  | Albert Pardini | Captain III (Police Department) | 212739.13 | 106088.18 | 16452.6 | 335279.91 | 335279.91 | 2011 | San Francisco |
 
 
+
 ## Queries
 Below are some aggregation exercises that can be performed using the `san_francisco_salaries` table:
 
