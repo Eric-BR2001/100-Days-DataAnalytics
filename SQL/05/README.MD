@@ -126,3 +126,5 @@ INNER JOIN Customers C ON O.CustomerID = C.CustomerID
 WHERE C.Country = 'USA'
 ORDER BY C.Name;
 ```
+
+---
