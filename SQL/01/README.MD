@@ -24,7 +24,9 @@ Here’s the data from my CSV file:
 Below are several SQL queries that I made myself based on the provided table data.
 
 ---
+
 # What are the unique species of creatures in the gotcreatures table?
+
 ## 1. Unique Species (Using DISTINCT)
 
 **Query:**
@@ -44,3 +46,5 @@ SELECT * FROM gotcreatures LIMIT 10 order by name;
 **Query:**
 
 SELECT name, gender FROM gotcreatures LIMIT 10 order by name;
+
+---
