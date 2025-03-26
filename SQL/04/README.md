@@ -77,3 +77,5 @@ This repository contains tables related to battles, characters, and creatures fr
    ```sql
    SELECT * FROM got_battles WHERE summer=TRUE AND attacker_king LIKE "%Joffrey%";
    ```
+
+   ---
