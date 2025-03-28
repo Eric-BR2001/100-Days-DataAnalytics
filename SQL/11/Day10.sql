@@ -1,0 +1,1 @@
+SELECT candidate_id from candidates where skill in('Python','Tableau','PostgreSQL') order by candidate_id LIMIT 1;

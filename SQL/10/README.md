@@ -43,6 +43,3 @@ SELECT candidate_id from candidates where skill in('Python','Tableau','PostgreSQ
 ### The fuction LIMIT is used to limite the number of rows in your result.
 ### The fuction ORDER BY is used to order a specific row in ascending.
 
-# My result was:
-
-![alt text](image.png)
