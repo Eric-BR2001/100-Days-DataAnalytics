@@ -37,7 +37,7 @@ Tesla is investigating production bottlenecks and needs your help to extract the
 
 ## My solution was very simple
 
-SELECT part,assembly_step FROM parts_assembly where finish_date IS NULL;;
+SELECT part,assembly_step FROM parts_assembly where finish_date IS NULL;
 
 ### Why I used this, based on my experience the best solutcion is IS NULL.
 
