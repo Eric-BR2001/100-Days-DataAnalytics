@@ -12,12 +12,6 @@ Welcome to the **Excel Exercises** repository! This project is designed to help 
 - Pivot tables and summaries
 - Data analysis and visualization
 
-## 📁 Structure
-
-- `exercises/`: Contains Excel files for each set of exercises.
-- `solutions/`: Contains completed versions with answers and explanations.
-- `README.md`: Overview and learning path.
-
 ## ✅ Requirements
 
 - Microsoft Excel (or Google Sheets / LibreOffice Calc)
