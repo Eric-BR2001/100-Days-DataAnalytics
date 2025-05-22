@@ -1,0 +1,69 @@
+# Python Function Exercises
+
+# 1. Basic Custom Function
+def greet(name):
+    print(f"Hello, {name}!")
+
+# 2. Function with Return Value
+def square(num):
+    return num ** 2
+
+# 3. Function with Default Parameter
+def power(base, exponent=2):
+    return base ** exponent
+
+# 4. Function with Multiple Return Values
+def calculate(a, b):
+    return a + b, a - b, a * b
+
+# 5. Using Built-in Functions
+def builtin_examples():
+    text = "python"
+    numbers = [3, 7, 2, 9, 4]
+    print(len(text))         # 6
+    print(max(numbers))      # 9
+    print(text.upper())      # "PYTHON"
+
+# 6. Lambda Function
+cube = lambda x: x ** 3
+
+# 7. Higher-Order Function: map
+def map_example():
+    nums = [1, 2, 3, 4, 5]
+    squared = list(map(lambda x: x**2, nums))
+    print(squared)
+
+# 8. Higher-Order Function: filter
+def filter_example():
+    nums = [1, 2, 3, 4, 5, 6]
+    evens = list(filter(lambda x: x % 2 == 0, nums))
+    print(evens)
+
+# 9. Recursive Function
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+# 10. Function Inside Another Function (Closure)
+def make_multiplier(n):
+    def multiplier(x):
+        return x * n
+    return multiplier
+
+
+# Example Tests
+if __name__ == "__main__":
+    greet("Eric")
+    print(square(5))
+    print(power(3))
+    print(power(3, 3))
+    sum_, diff, prod = calculate(10, 5)
+    print(sum_, diff, prod)
+    builtin_examples()
+    print(cube(4))
+    map_example()
+    filter_example()
+    print(factorial(5))
+    double = make_multiplier(2)
+    print(double(10))
