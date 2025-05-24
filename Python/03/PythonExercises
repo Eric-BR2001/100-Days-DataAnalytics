@@ -1,0 +1,66 @@
+# Day 3: Python Function Exercises - Strings and Files
+
+# 1. Reverse a string
+def reverse_string(s):
+    return s[::-1]
+
+# 2. Count vowels in a string
+def count_vowels(s):
+    return sum(1 for c in s.lower() if c in 'aeiou')
+
+# 3. Check if a string is a palindrome
+def is_palindrome(s):
+    s = ''.join(c.lower() for c in s if c.isalnum())
+    return s == s[::-1]
+
+# 4. Count word frequency in a string
+def word_frequency(text):
+    from collections import Counter
+    words = text.lower().split()
+    return dict(Counter(words))
+
+# 5. Replace a word in a string
+def replace_word(text, old, new):
+    return text.replace(old, new)
+
+# 6. Read text from a file
+def read_file(filename):
+    with open(filename, 'r') as file:
+        return file.read()
+
+# 7. Write text to a file
+def write_file(filename, content):
+    with open(filename, 'w') as file:
+        file.write(content)
+
+# 8. Append text to a file
+def append_to_file(filename, content):
+    with open(filename, 'a') as file:
+        file.write(content + '\n')
+
+# 9. Count lines in a file
+def count_lines(filename):
+    with open(filename, 'r') as file:
+        return len(file.readlines())
+
+# 10. Get all unique words from a text
+def unique_words(text):
+    return set(text.lower().split())
+
+
+# Example Tests
+if __name__ == "__main__":
+    s = "Hello World"
+    print("Reverse:", reverse_string(s))
+    print("Vowel count:", count_vowels(s))
+    print("Is 'madam' palindrome?:", is_palindrome("madam"))
+    sample_text = "Hello world, hello again!"
+    print("Word frequency:", word_frequency(sample_text))
+    print("Replace word:", replace_word(sample_text, "hello", "hi"))
+
+    test_filename = "sample_text.txt"
+    write_file(test_filename, "This is a test file.\nWith multiple lines.\nHello again!")
+    append_to_file(test_filename, "Another line here.")
+    print("Read file:", read_file(test_filename))
+    print("Line count:", count_lines(test_filename))
+    print("Unique words:", unique_words(sample_text))
