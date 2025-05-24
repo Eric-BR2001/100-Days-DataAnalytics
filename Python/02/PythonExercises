@@ -1,0 +1,80 @@
+# Day 2: Python Function Exercises - Math Problems
+
+import math
+
+# 1. Calculate the area of a circle
+def area_of_circle(radius):
+    return math.pi * radius ** 2
+
+# 2. Check if a number is prime
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# 3. Generate Fibonacci sequence up to n terms
+def fibonacci(n):
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+# 4. Calculate factorial using recursion
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+# 5. Calculate the greatest common divisor (GCD)
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+# 6. Calculate the least common multiple (LCM)
+def lcm(a, b):
+    return abs(a * b) // gcd(a, b)
+
+# 7. Solve a quadratic equation ax^2 + bx + c = 0
+def solve_quadratic(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No Real Roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root,
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+# 8. Calculate the sum of digits of a number
+def sum_of_digits(n):
+    return sum(int(d) for d in str(abs(n)))
+
+# 9. Check if a number is a palindrome
+def is_palindrome_number(n):
+    return str(n) == str(n)[::-1]
+
+# 10. Find all divisors of a number
+def find_divisors(n):
+    return [i for i in range(1, n+1) if n % i == 0]
+
+
+# Example Tests
+if __name__ == "__main__":
+    print("Area of circle (r=5):", area_of_circle(5))
+    print("Is 29 prime?:", is_prime(29))
+    print("Fibonacci (10 terms):", fibonacci(10))
+    print("Factorial of 6:", factorial(6))
+    print("GCD of 60 and 48:", gcd(60, 48))
+    print("LCM of 12 and 15:", lcm(12, 15))
+    print("Solve quadratic (1, -3, 2):", solve_quadratic(1, -3, 2))
+    print("Sum of digits in 1234:", sum_of_digits(1234))
+    print("Is 1221 a palindrome?:", is_palindrome_number(1221))
+    print("Divisors of 28:", find_divisors(28))
