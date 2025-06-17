@@ -1,10 +1,10 @@
-def coin_change(coins, target_amount):
-    dp = [float('inf')] * (target_amount + 1)
-    dp[0] = 0
+def climb_hill(n):
+    if n == 0 or n == 1:
+        return 1
 
-    for amount in range(1, target_amount + 1):
-        for coin in coins:
-            if coin <= amount:
-                dp[amount] = min(dp[amount], dp[amount - coin] + 1)
+    a, b = 1, 1  # ways(0) = 1, ways(1) = 1
 
-    return dp[target_amount] if dp[target_amount] != float('inf') else -1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+
+    return b
