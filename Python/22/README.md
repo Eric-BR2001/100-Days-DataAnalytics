@@ -58,3 +58,45 @@ Output: [-1, -1]
 ### My Result was:
 ![alt text](image-1.png)
 
+
+# 2- Two Sum (Part 2)
+
+**Amazon Python Interview Question**
+
+In this variation of the classic **Two Sum** problem, the input array is **sorted in non-decreasing order**, and your solution must be memory-efficient: **no hash maps allowed**. Think **binary search** and **two pointers**.
+
+---
+
+## 🧩 Problem Description
+
+You're given:
+
+* A sorted array `nums` of integers (non-decreasing order)
+* An integer `target`
+
+Return the **indices of the two elements** that sum up to `target`.
+
+### ⚠️ Clarifications
+
+* There is **at most one solution**
+* Return `[-1, -1]` if no such pair exists
+* Do **not** use the same element twice
+* Return indices in **increasing order**, e.g., `[2, 5]`, not `[5, 2]`
+* Your solution **must use constant extra space**
+
+---
+
+## 🔍 Example
+
+### Example 1
+
+```python
+Input: nums = [1, 3, 4, 5, 7, 12, 15], target = 9
+Output: [2, 3]
+```
+
+**Explanation:**
+4 (at index 2) + 5 (at index 3) = 9
+
+### My Result was:
+![alt text](image-2.png)
