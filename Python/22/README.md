@@ -100,3 +100,46 @@ Output: [2, 3]
 
 ### My Result was:
 ![alt text](image-2.png)
+
+
+# 3- Two Sum (Part 3)
+
+**Amazon Python Interview Question**
+
+This variation of the **Two Sum** problem asks you to do more than just match a target — you need to find the **largest possible sum of two distinct elements** that is **strictly less than** a given number `k`.
+
+This version tests your ability to **maximize within constraints** — a common requirement in system design and optimization interviews.
+
+---
+
+## 🧩 Problem Description
+
+Given:
+
+* An array of integers `nums`
+* An integer `k`
+
+Return the **largest possible sum** of two different elements `nums[i] + nums[j]` such that:
+
+* `i ≠ j`
+* `nums[i] + nums[j] < k`
+
+If **no such pair exists**, return `-1`.
+
+---
+
+## 🔍 Example
+
+### Example 1
+
+```python
+Input: nums = [34, 23, 1, 24, 75, 33, 54, 8], k = 60
+Output: 58
+```
+
+**Explanation:**
+The pair (34 + 24) = 58 is the closest you can get to 60 without going over.
+
+
+### My Result was:
+![alt text](image-3.png)
