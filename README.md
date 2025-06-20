@@ -8,7 +8,7 @@ Each phase of the challenge focuses on a key data analytics skill:
 - 🔹 **25 Days of SQL** – Mastering data querying and manipulation.
 - 🔹 **25 Days of Excel** – Exploring data analysis, formulas, and automation.
 - 🔹 **25 Days of Python** – Applying Python for data processing and visualization.
-- 🔹 **25 Days of Power BI** – Creating interactive dashboards and reports.
+- 🔹 **25 Days of Real World Projects** – Creating Real World Projects.
 
 ## 📌 Goals
 ✅ Strengthen fundamental data analytics skills.
@@ -22,7 +22,7 @@ Each phase of the challenge focuses on a key data analytics skill:
 ├── 📁 SQL
 ├── 📁 Excel
 ├── 📁 Python
-├── 📁 PowerBI
+├── 📁 Real World Projects
 └── README.md
 ```
 Each folder contains resources, practice files, and projects related to the respective topic.
