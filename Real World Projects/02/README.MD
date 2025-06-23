@@ -1,8 +1,7 @@
-# Analyzing Unicorn Companies 🦄
+# Uncovering the World's Oldest Businesses 🏛️
 
 **Project Overview**
 
-With the explosion of amateur investing and the democratization of market data, it’s more important than ever to understand the financial landscape of high-growth companies. This project dives into a **PostgreSQL database of unicorn companies** — privately held startups valued at **over \$1 billion** — to uncover trends, opportunities, and booming industries.
+Longevity in business is rare — but a handful of companies have managed to survive for centuries. In this project, you'll analyze data from [BusinessFinancing.co.uk](https://businessfinancing.co.uk) to uncover the **world's oldest businesses** and the patterns behind their survival.
 
----
-
+Using SQL-based techniques like **joins**, **aggregation**, and **data filtering**, you’ll explore which regions, industries, and conditions are best suited for business longevity.
